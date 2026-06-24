@@ -1,4 +1,4 @@
-# 📚 LokaBuku - Digital Library Management System
+#  LokaBuku - Digital Library Management System
 
 > **Tugas Akhir Semester (UAS) - Pemrograman Web 2**
 > 
@@ -15,22 +15,20 @@
 
 ---
 
-## 🗂️ Pengorganisasian Repositori
+## Pengorganisasian Repositori
 Proyek ini dibagi menjadi dua folder utama sesuai instruksi:
-* `📁 backend-api/` : Berisi sistem backend menggunakan framework **CodeIgniter 4** untuk menyediakan layanan RESTful API.
-* `📁 frontend-spa/` : Berisi sistem frontend SPA dengan file `index.html`, aset TailwindCSS, dan komponen berbasis **VueJS**.
+* ` backend-api/` : Berisi sistem backend menggunakan framework **CodeIgniter 4** untuk menyediakan layanan RESTful API.
+* ` frontend-spa/` : Berisi sistem frontend SPA dengan file `index.html`, aset TailwindCSS, dan komponen berbasis **VueJS**.
 
 ---
 
 ## 📸 Dokumentasi Visual
 
 ### 1. Skema Relasi Tabel Database
-![Skema Database]
 <img width="386" height="201" alt="Screenshot 2026-06-23 221609" src="https://github.com/user-attachments/assets/c9fcde8e-746e-4e96-9c1d-9b0267553d49" />
 
 
 ### 2. Uji Coba API Gagal (Proteksi Token JWT)
-![Postman Error 401]
 <img width="640" height="358" alt="Screenshot 2026-06-23 004225" src="https://github.com/user-attachments/assets/3ef752e5-bd99-4e6b-8419-c9c0335e8015" />
 
 
