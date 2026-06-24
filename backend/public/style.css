@@ -1,0 +1,387 @@
+/* Reset sederhana */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f6f1eb;
+    color: #4e342e;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #6d4c41;
+}
+
+a:hover {
+    color: #3e2723;
+}
+
+#container {
+    width: 1100px;
+    margin: 20px auto;
+    background: #fffaf5;
+    box-shadow: 0 6px 20px rgba(93, 64, 55, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #8d6e63, #5d4037);
+    color: #fff8f0;
+    padding: 30px 40px;
+}
+
+header h1 {
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+nav {
+    background: #6d4c41;
+    padding: 0;
+    display: flex;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid #5d4037;
+}
+
+nav a {
+    color: #fff8f0;
+    padding: 16px 28px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: #8d6e63;
+    color: #fff;
+}
+
+/* Wrapper */
+#wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* Main */
+#main {
+    flex: 3;
+    min-height: 400px;
+}
+
+#main h2 {
+    font-size: 30px;
+    color: #5d4037;
+    margin-bottom: 8px;
+}
+
+#main hr {
+    border: none;
+    border-top: 2px solid #bcaaa4;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#main p {
+    font-size: 17px;
+    color: #5d4037;
+    margin-bottom: 15px;
+}
+
+/* Sidebar */
+#sidebar {
+    flex: 1.2;
+}
+
+.widget-box {
+    background: #fbf5f0;
+    border: 1px solid #d7ccc8;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(93, 64, 55, 0.08);
+}
+
+.widget-box .title {
+    background: #8d6e63;
+    color: #fffaf5;
+    padding: 14px 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.widget-box ul {
+    list-style: none;
+}
+
+.widget-box ul li {
+    border-bottom: 1px solid #e0d6d1;
+}
+
+.widget-box ul li:last-child {
+    border-bottom: none;
+}
+
+.widget-box ul li a {
+    display: block;
+    padding: 12px 18px;
+    color: #5d4037;
+    transition: 0.3s;
+}
+
+.widget-box ul li a:hover {
+    background: #efebe9;
+    padding-left: 22px;
+}
+
+.widget-box p {
+    padding: 16px 18px;
+    font-size: 15px;
+    color: #6d4c41;
+}
+
+/* Footer */
+footer {
+    background: #3e2723;
+    color: #fbe9e7;
+    text-align: center;
+    padding: 18px;
+    font-size: 15px;
+}
+
+/* FAQ */
+.faq-item {
+    background: #f8eee7;
+    border-left: 5px solid #8d6e63;
+    padding: 15px 18px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.faq-item h4 {
+    margin-bottom: 8px;
+    color: #5d4037;
+}
+
+/* Artikel contoh */
+article.entry {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d7ccc8;
+}
+
+article.entry h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+article.entry p {
+    font-size: 16px;
+}
+
+/* Responsive sederhana */
+@media (max-width: 1200px) {
+    #container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+}
+/* =========================
+   ADMIN BROWN AESTHETIC
+========================= */
+
+.admin-header {
+    background: linear-gradient(135deg, #6d4c41, #4e342e);
+    color: #fff8f0;
+    padding: 32px 40px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+}
+
+.admin-subtitle {
+    margin-top: 8px;
+    color: #f3e5d8;
+    font-size: 15px;
+}
+
+.admin-nav {
+    background: #5d4037;
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #4e342e;
+}
+
+.admin-nav a {
+    color: #fffaf5;
+    padding: 15px 24px;
+    display: inline-block;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.admin-nav a:hover {
+    background: #8d6e63;
+    color: #fff;
+}
+
+.admin-footer {
+    background: #3e2723;
+    color: #fbe9e7;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+.admin-page h2 {
+    margin-bottom: 20px;
+    color: #5d4037;
+    font-size: 30px;
+}
+
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card-table {
+    background: #fffaf5;
+    border: 1px solid #dbc8bc;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(93, 64, 55, 0.10);
+    overflow-x: auto;
+}
+
+.table-admin {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-admin thead {
+    background: #8d6e63;
+    color: #fffaf5;
+}
+
+.table-admin th,
+.table-admin td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eadfd7;
+    vertical-align: top;
+}
+
+.table-admin tbody tr:hover {
+    background: #f8f1eb;
+}
+
+.article-title {
+    font-weight: bold;
+    color: #4e342e;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.article-snippet {
+    color: #7b5e57;
+    font-size: 14px;
+}
+
+.badge-status {
+    display: inline-block;
+    background: #d7ccc8;
+    color: #4e342e;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 6px;
+    transition: 0.3s ease;
+}
+
+.btn-add {
+    background: #6d4c41;
+    color: #fffaf5;
+}
+
+.btn-add:hover {
+    background: #4e342e;
+    color: #fff;
+}
+
+.btn-edit {
+    background: #a1887f;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: #8d6e63;
+}
+
+.btn-delete {
+    background: #795548;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #5d4037;
+}
+
+.empty-state {
+    text-align: center;
+    color: #7b5e57;
+    padding: 24px;
+}
+.faq-item {
+    background: #f8eee7;
+    border-left: 5px solid #8d6e63;
+    padding: 15px 18px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.faq-item h4 {
+    margin-bottom: 8px;
+    color: #5d4037;
+}

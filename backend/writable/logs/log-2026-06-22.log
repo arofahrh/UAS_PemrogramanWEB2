@@ -1,0 +1,455 @@
+CRITICAL - 2026-06-22 17:10:39 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "bukuid=6a396a37cde64b32be22444cfdd1f33d&clckatsg=1&hsmssg=0"
+[Method: GET, Route: bukuid=6a396a37cde64b32be22444cfdd1f33d&clckatsg=1&hsmssg=0]
+in SYSTEMPATH\Router\Router.php on line 768.
+ 1 SYSTEMPATH\Router\Router.php(219): CodeIgniter\Router\Router->checkDisallowedChars('bukuid=6a396a37cde64b32be22444cfdd1f33d&clckatsg=1&hsmssg=0')
+ 2 SYSTEMPATH\CodeIgniter.php(829): CodeIgniter\Router\Router->handle('bukuid=6a396a37cde64b32be22444cfdd1f33d&clckatsg=1&hsmssg=0')
+ 3 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+ERROR - 2026-06-22 17:12:43 --> Column 'judul' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (:judul:, :id_kategori:, :penulis:, :penerbit:, :status_peminjaman:)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Buku.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Buku->create()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:12:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'judul' cannot be null
+[Method: POST, Route: buku]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (:judul:, :id_kategori:, :penulis:, :penerbit:, :status_peminjaman:)', [...], false)
+ 2 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Buku.php(64): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Buku->create()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:12:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'judul' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (:judul:, :id_kategori:, :penulis:, :penerbit:, :status_peminjaman:)', [...], false)
+ 4 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Buku.php(64): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Buku->create()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:12:43 --> [Caused by] mysqli_sql_exception: Column 'judul' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `buku` (`judul`, `id_kategori`, `penulis`, `penerbit`, `status_peminjaman`) VALUES (:judul:, :id_kategori:, :penulis:, :penerbit:, :status_peminjaman:)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Buku.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Buku->create()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:31:10 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: POST, Route: buku]
+in SYSTEMPATH\Filters\Filters.php on line 299.
+ 1 SYSTEMPATH\Filters\Filters.php(239): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('buku', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:34:42 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: POST, Route: buku]
+in SYSTEMPATH\Filters\Filters.php on line 299.
+ 1 SYSTEMPATH\Filters\Filters.php(239): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('buku', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:35:27 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: POST, Route: buku]
+in SYSTEMPATH\Filters\Filters.php on line 299.
+ 1 SYSTEMPATH\Filters\Filters.php(239): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('buku', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:36:09 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: POST, Route: buku]
+in SYSTEMPATH\Filters\Filters.php on line 299.
+ 1 SYSTEMPATH\Filters\Filters.php(239): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('buku', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 17:36:34 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: POST, Route: buku]
+in SYSTEMPATH\Filters\Filters.php on line 299.
+ 1 SYSTEMPATH\Filters\Filters.php(239): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('buku', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:11:21 --> Error: Call to undefined method App\Controllers\Auth::failNotFound()
+[Method: POST, Route: login]
+in APPPATH\Controllers\Auth.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:12:36 --> Error: Call to undefined method App\Controllers\Auth::failNotFound()
+[Method: POST, Route: login]
+in APPPATH\Controllers\Auth.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:14:05 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:14:05 --> Error: Call to undefined method App\Controllers\Auth::failNotFound()
+[Method: POST, Route: login]
+in APPPATH\Controllers\Auth.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:16:25 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:18:22 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+ERROR - 2026-06-22 18:18:22 --> Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:18:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:18:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 4 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:18:22 --> [Caused by] mysqli_sql_exception: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:18:48 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+ERROR - 2026-06-22 18:18:48 --> Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:18:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:18:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 4 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-22 18:18:48 --> [Caused by] mysqli_sql_exception: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(296): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:34:26 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:35:01 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:47:06 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('buku')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('buku', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 18:49:29 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('buku')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('buku', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 20:06:53 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
+WARNING - 2026-06-22 20:09:28 --> [DEPRECATED] Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\UAS\\backend-api\\public\\index.php')
