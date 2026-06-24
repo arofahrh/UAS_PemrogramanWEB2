@@ -17,8 +17,8 @@
 
 ## Pengorganisasian Repositori
 Proyek ini dibagi menjadi dua folder utama sesuai instruksi:
-* ` backend-api/` : Berisi sistem backend menggunakan framework **CodeIgniter 4** untuk menyediakan layanan RESTful API.
-* ` frontend-spa/` : Berisi sistem frontend SPA dengan file `index.html`, aset TailwindCSS, dan komponen berbasis **VueJS**.
+* ` backend/` : Berisi sistem backend menggunakan framework **CodeIgniter 4** untuk menyediakan layanan RESTful API.
+* ` frontend/` : Berisi sistem frontend SPA dengan file `index.html`, aset TailwindCSS, dan komponen berbasis **VueJS**.
 
 ---
 
